@@ -1,1 +1,2 @@
 # Journal-Reminder-Flask-App
+This program uses python with SQL and Flask on the backend with HTML on the front end to create a local website that can store a user's journal entries as well as reminders. With SQL and Flask, login information for multiple users can be created, stored, and easily accesed while making sure to save the entries and reminders of users by their login. It also supports deleting both kinds of entries from the site and database.
