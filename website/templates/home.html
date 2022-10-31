@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %}
+
+{% block content %}
+<h1 align="center">Hello, {{ user.first_name }}</h1>
+    <div align="center">
+        <button type="button" class="btn btn-primary" onClick="location.href='journal';">Add Journal Entry</button>
+        <button type="button" class="btn btn-primary" onClick="location.href='reminder';">Add Reminder</button>
+    </div>
+{% endblock %}

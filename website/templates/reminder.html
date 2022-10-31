@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block title %}Reminders{% endblock %}
+
+{% block content %}
+<h1 align="center">Reminders</h1>
+<ul class="list-group list-group-flush" id="reminders">
+    {% for reminder in user.reminders %}
+    <li class="list-group-item">{{ reminder.data }} <br />  {{ reminder.duedate }}
+        <button type="button" class="close"  onClick="deleteReminder({{ reminder.id }})">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </li>
+    {% endfor %}
+</ul>
+<form method="POST">
+    <p align="center"></p>
+    <textarea placeholder="Type reminder in this box..." name="reminder" id="reminder" class="form-control"></textarea>
+    <br />
+    <textarea placeholder="Enter deadline/timeframe for reminder... (Optional)" name="due" id="due" class="form-control"></textarea>
+    <br />
+    <div align="center">
+        <button type="submit" class="btn btn-success">Add Reminder</button>
+    </div>
+</form>
+{% endblock %}
